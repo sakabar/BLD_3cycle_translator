@@ -389,11 +389,11 @@ inputAreaText.addEventListener('keyup', function (){
     outputAreaText.value = "";
     for(let i = 0; i < len; i++){
         const key = lines[i];
-        outputAreaText.value += key + ' ';
+
         if (key in cycleDict) {
-            outputAreaText.value += cycleDict[key] + '\n';
+            outputAreaText.value += key + ' ' + cycleDict[key] + '\n';
         } else {
-            outputAreaText.value += 'ERROR\n';
+            outputAreaText.value += '\n';
         }
     }
 });
